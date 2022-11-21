@@ -1,8 +1,10 @@
 {% extends 'base.html' %} 
 {% block content %}
 
-
-  {{ text }}
-
+  <h1>{{ text }}</h1><br>
+  Длина строки: ({{ text }}) {{ text|length }} <br><hr>
+  <a class="navbar-brand" href="{% url 'dashboard:index' %}">Вернуться на главную</a><br>
+  <h2>Стихотворение</h2><br>
+  {{ text2|safe }}
 
 {% endblock content %}
